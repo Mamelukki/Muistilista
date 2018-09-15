@@ -4,7 +4,7 @@
 Käyttäjä voi luoda itselleen tunnuksen, jota hän käyttää oman muistilistan tekemiseen.
 
 ### Kirjautuminen
-Käyttäjä voi kirjautua sovellukseen omalla tunnuksella. Jokaisella käyttäjällä on oma tällöin muistilista.
+Käyttäjä voi kirjautua sovellukseen omalla tunnuksellaan. Jokaisella käyttäjällä on oma tällöin muistilista.
 
 ### Tehtävän lisääminen
 Käyttäjä voi lisätä uuden tehtävän ja samalla antaa sille tärkeysasteen.
