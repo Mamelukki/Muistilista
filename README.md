@@ -8,4 +8,5 @@ Sovellus toimii [Herokussa](https://mamelukin-muistilista.herokuapp.com/)
 ## Dokumentaatio
 
 [Alustava tietokantakaavio](https://yuml.me/655c4733.png)
+
 [Keskeiset käyttötapaukset](https://github.com/Mamelukki/Muistilista/blob/master/documentation/k%C3%A4yttotapaukset.md)
