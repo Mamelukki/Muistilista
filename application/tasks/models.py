@@ -5,10 +5,14 @@ class Task(db.Model):
     date_created = db.Column(db.DateTime, default=db.func.current_timestamp())
     date_modified = db.Column(db.DateTime, default=db.func.current_timestamp(),
     onupdate=db.func.current_timestamp())
-
     name = db.Column(db.String(144), nullable=False)
+    priority = db.Column(db.Integer, nullable=False)
     done = db.Column(db.Boolean, nullable=False)
 
-    def __init__(self, name):
+    def __init__(self, name, priority):
         self.name = name
+        self.priority = priority
         self.done = False
+
+    def get_id(self):
+      return self.id

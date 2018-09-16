@@ -21,7 +21,7 @@ def tasks_set_done(task_id):
 
 @app.route("/tasks/", methods=["POST"])
 def tasks_create():
-    t = Task(request.form.get("name"))
+    t = Task(request.form.get("name"), request.form.get("priority"))
 
     db.session().add(t)
     db.session().commit()
