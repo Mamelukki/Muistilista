@@ -2,12 +2,42 @@
   
 {% block body %}
 <form method="POST" action="{{ url_for('tasks_create') }}">
-  Tehtävä:<br>
-  <input type="text" name="name"/><br><br>
-  Tärkeysaste:<br>
-  <input type="radio" name="priority" value="1"/> 1<br>
-  <input type="radio" name="priority" value="2"/> 2<br>
-  <input type="radio" name="priority" value="3"/> 3<br><br>
-  <input type="submit" value="Lisää uusi tehtävä"/>
+  <table>
+      <tr>
+	<td>
+	  {{ form.name.label }}
+	</td>
+	<td>
+	  {{ form.name }}
+	</td>
+        <td>
+          <ul>
+	    {% for error in form.name.errors %}
+	    <li>{{ error }}</li>
+	    {% endfor %}
+	  </ul>
+        </td>
+      </tr>
+      <tr>
+	<td>
+	  {{ form.priority.label }}
+	</td>
+	<td>
+	  {{ form.priority }}
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  {{ form.done.label }}
+	</td>
+	<td>
+	  {{ form.done }}
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3">
+	  <input type="submit" value="Lisää uusi tehtävä"/>
+	</td>
+      </tr>
 </form>
 {% endblock %}
