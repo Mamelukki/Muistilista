@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+  
+{% block body %}
+<form method="POST" action="{{ url_for('tasks_edit', task_id=task.id) }}">
+  <table>
+      <tr>
+	<td>
+	  {{ form.name.label }}
+	</td>
+	<td>
+	  {{ form.name(value = task.name) }}
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  {{ form.priority.label }}
+	</td>
+	<td>
+	  {{ form.priority(value = task.priority) }}
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  {{ form.done.label }}
+	</td>
+	<td>
+	  {{ form.done(value = task.done) }}
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3">
+	  <input type="submit" value="Hyväksy"/>
+	</td>
+      </tr>
+      <tr>
+        <td>
+          <form method ="POST" action="{{ url_for('tasks_index') }}">
+            <input type="button" value="Peruuta" onclick="history.back()">
+          </form>
+        </td>
+      </tr>
+</form>
+{% endblock %}
