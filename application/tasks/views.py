@@ -3,7 +3,7 @@ from flask_login import login_required, current_user
 
 from application import app, db
 from application.tasks.models import Task
-from application.tasks.forms import TaskForm
+from application.tasks.forms import TaskForm, EditForm
 
 @app.route("/tasks", methods=["GET"])
 def tasks_index():
@@ -37,6 +37,25 @@ def tasks_create():
     t.account_id = current_user.id
   
     db.session().add(t)
+    db.session().commit()
+
+    return redirect(url_for("tasks_index"))
+
+@app.route("/tasks/edit/<task_id>/", methods=["POST"])
+@login_required
+def tasks_edit(task_id):
+    form = EditForm(request.form)
+
+    t = Task.query.get(task_id)
+
+    if not form.validate():
+        return render_template("tasks/edit.html", task = t, form = form)
+
+    t.name = form.name.data
+    t.priority = form.priority.data
+    t.done = form.done.data
+    t.account_id = current_user.id
+
     db.session().commit()
 
     return redirect(url_for("tasks_index"))
