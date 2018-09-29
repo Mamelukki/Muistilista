@@ -3,10 +3,7 @@ from flask_login import login_required, current_user
 
 from application import app, db
 from application.tasks.models import Task
-<<<<<<< HEAD
 from application.auth.models import User
-=======
->>>>>>> 90c44f89950bbd3bdb3b53d34d720731a0908135
 from application.tasks.forms import TaskForm, EditForm
 
 @app.route("/tasks", methods=["GET"])
