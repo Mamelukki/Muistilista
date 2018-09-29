@@ -5,14 +5,21 @@
     <tr>
       <th>Tehtävä</th>
       <th>Tärkeysaste</th>
-      <th>Tehty</th>
+      <th>Status</th>
       <th></th>
     </tr>
     {% for task in tasks %}
+    {% if task.account_id == id %}
     <tr>
       <td>{{ task.name }}</td>
       <td>{{ task.priority }}</td>
-      <td>{{ task.done }}</td>
+      <td>
+      {% if task.done %}
+        Tehty
+      {% else %}
+        Tekemättä
+      {% endif %}
+      </td>
       <td>
         <form method="POST" action="{{ url_for('tasks_edit', task_id=task.id) }}">
 	  <input type="submit" value="Muokkaa"/>
@@ -29,6 +36,7 @@
 	</form>
       </td>
     </tr>
+    {% endif %}
     {% endfor %}
   </table>
 {% endblock %}

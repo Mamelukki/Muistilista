@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Kategoria</th>
+      <th></th>
+    </tr>
+    {% for category in categories %}
+    {% if category.account_id == id %}
+    <tr>
+      <td>{{ category.name }}</td>
+      <td>
+        <form method="POST" action="{{ url_for('categories_edit', category_id=category.id) }}">
+	  <input type="submit" value="Muokkaa"/>
+	</form>
+      </td>
+      <td>
+        <form method="POST" action="{{ url_for('categories_remove', category_id=category.id) }}">
+	  <input type="submit" value="Poista"/>
+	</form>
+      </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+{% endblock %}
