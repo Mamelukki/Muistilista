@@ -5,20 +5,4 @@
     Muistilista
   </p>
 
-
-{% if needs_tasks is defined %}
-<p>
-  Seuraavat käyttäjät tarvitsevat tehtäviä:
-</p>
-
-<ul>
-  {% for user in needs_tasks %}
-  <li>
-    {{user.id}} {{user.name}}
-  </li>
-  {% endfor %}
-</ul>
-
-{% endif %}
-
 {% endblock %}
