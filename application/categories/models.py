@@ -10,3 +10,12 @@ nullable=False)
 
     def __init__(self, name):
         self.name = name
+
+    @staticmethod
+    def all_by_id(ids):
+        ret = []
+        for c in db.session().query(Category).filter(Category.id.in_(ids)):
+            print(c)
+            ret.append(c)
+        return ret
+
