@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
   
 {% block body %}
+<h3>Lisää uusi tehtävä</h3>
+<hr>
+<pr>Lisää uuden tehtävän tiedot alla oleviin kenttiin. Huomaathan, että mitä pienempi prioriteetti, sitä tärkeämpi kyseinen tehtävä on (1 - erittäin tärkeä, 5 - ei kovinkaan tärkeä). Tehtävälle voi antaa yhden tai useamman kategorian tai sen voi jättää kokonaan ilman kategoriaa. </pr>
+<hr>
 <form method="POST" action="{{ url_for('tasks_create') }}">
   <table>
       <tr>

@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
   
 {% block body %}
+<h3>Muokkaa kategoriaa</h3>
+<hr>
+<pr>Voit muuttaa olemassaolevan kategorian nimen muokkaamalla alla olevan kentän sisältöä. Mikäli et haluakaan muuttaa kategorian tietoja, pääset takaisin kategorialistaukseen klikkaamalla peruuta.</pr>
+<hr>
 <form method="POST" action="{{ url_for('categories_edit', category_id=category.id) }}">
   <table>
       <tr>

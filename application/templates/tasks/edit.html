@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
   
 {% block body %}
+<h3>Muokkaa tehtävää</h3>
+<hr>
+<pr>Voit muokata olemassaolevaa tehtävää muokkaamalla alla olevien kenttien sisältöä. Mikäli et haluakaan muuttaa tehtävän tietoja, pääset takaisin kaikkiin tehtäviin klikkaamalla peruuta.</pr>
+<hr>
 <form method="POST" action="{{ url_for('tasks_edit', task_id=task.id) }}">
   <table>
       <tr>

@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
   
 {% block body %}
+<h3>Lisää uusi kategoria</h3>
+<hr>
+<pr>Lisää uusi kategoria antamalla sille nimi alla olevaan kenttään. </pr>
+<hr>
 <form method="POST" action="{{ url_for('categories_create') }}">
   <table>
       <tr>
