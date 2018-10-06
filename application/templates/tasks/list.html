@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 
-{% block body %}
-  <table>
+{% block body %}    
+
+<div class="container">
+  <h2>Tehtävät</h2>    
+  <table class="table" style="width:50%">
     <tr>
       <th>Tehtävä</th>
       <th>Kategoria</th>
@@ -32,17 +35,17 @@
       </td>
       <td>
         <form method="POST" action="{{ url_for('tasks_edit', task_id=task.id) }}">
-	  <input type="submit" value="Muokkaa"/>
+	  <input type="submit" class="btn btn-info btn-sm" value="Muokkaa"/>
         </form>
       </td>
       <td>
 	<form method="POST" action="{{ url_for('tasks_set_done', task_id=task.id) }}">
-	  <input type="submit" value="Muuta tehdyksi"/>
+	  <input type="submit" class="btn btn-info btn-sm" value="Merkitse tehdyksi"/>
 	</form>
       </td>
       <td>
         <form method="POST" action="{{ url_for('tasks_remove', task_id=task.id) }}">
-	  <input type="submit" value="Poista"/>
+	  <input type="submit" class="btn btn-info btn-sm" value="Poista"/>
 	</form>
       </td>
     </tr>
