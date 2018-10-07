@@ -12,6 +12,11 @@
     <tr>
       <td>{{ category.name }}</td>
       <td>
+        <form method="POST" action="{{ url_for('categories_details', category_id=category.id) }}">
+	  <input type="submit" class="btn btn-info btn-sm" value="Tiedot"/>
+	</form>
+      </td>
+      <td>
         <form method="POST" action="{{ url_for('categories_edit', category_id=category.id) }}">
 	  <input type="submit" class="btn btn-info btn-sm" value="Muokkaa"/>
 	</form>

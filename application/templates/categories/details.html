@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h3>Kategorian "{{ category.name }}" tiedot</h3>
+<hr>
+<pr>Kategoriaan kuuluvat tehtävät:</pr>
+<hr>
+  <table>
+      <tr>
+	{% if category.tasks_of_a_category is defined %}
+            <td>
+                {% for string in category.tasks_of_a_category(category.id) %}
+                <li>
+                    {{ string }}
+                </li>
+                {% endfor %}
+            </td>
+        {% endif %}
+      </tr>
+      <tr>
+        <td>
+          <form method ="POST" action="{{ url_for('categories_index') }}">
+            <input type="button" class="btn btn-info btn-sm" value="Peruuta" onclick="history.back()">
+          </form>
+        </td>
+      </tr>
+</form>
+{% endblock %}
+

@@ -5,7 +5,7 @@ Sovellusta voi käyttää joko Herokussa olevalla [testipalvelimella](https://ma
 
 ### Rekisteröityminen ja kirjautuminen
 
-Sovelluksen käyttöön tarvitset käyttäjätunnuksen. Herokussa voit käyttää jo olemassa olevaa tunnusta testaamiseen:
+Sovelluksen käyttämiseen tarvitset käyttäjätunnuksen. Herokussa voit käyttää jo olemassaolevaa tunnusta testaamiseen:
 
 - Käyttäjätunnus: testi
 - Salasana: 123

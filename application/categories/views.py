@@ -58,3 +58,10 @@ def categories_remove(category_id):
     db.session().commit()
   
     return redirect(url_for("categories_index"))
+
+@app.route("/categories/details/<category_id>/", methods=["POST"])
+@login_required
+def categories_details(category_id):
+
+    c = Category.query.get(category_id)
+    return render_template("categories/details.html", category = c)
