@@ -19,7 +19,7 @@ Käyttäjä voi tarkastella lisäämiään tehtäviä ja muuttaa niiden statukse
 Käyttäjä voi halutessaan poistaa tehtäviä muistilistalta. 
 
 ### Luokan lisääminen
-Käyttäjä voi lisätä sovellukseen uusia luokkia tehtävien organisoimiseksi. 
+Käyttäjä voi lisätä sovellukseen uusia kategorioita tehtävien organisoimiseksi. 
 
 ### Luokan poistaminen
-Käyttäjä voi poistaa jo tekemiään luokkia. 
+Käyttäjä voi poistaa kategorioita. 

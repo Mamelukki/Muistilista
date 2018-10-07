@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<h3>Rekisteröidy</h3>
+<hr>
+<pr>Mikäli olet jo luonut käyttäjätunnuksen, aloita kirjautumalla sisään.</pr>
+<hr>
 {{ error }}
 <form method="POST" action="{{ url_for('auth_register') }}">
   <table>

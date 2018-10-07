@@ -1,6 +1,6 @@
 # Tietokantasovellus: Muistilista
 
-Teen tietokantasovelluksen valmiista aiheesta ["muistilista"](http://advancedkittenry.github.io/suunnittelu_ja_tyoymparisto/aiheet/Muistilista.html). Tarkoituksena on siis toteuttaa sovellus, joka toimii muistilistan tavoin: käyttäjä voi lisätä tehtäviä, antaa niille tärkeysasteen ja merkitä ne tehdyiksi. Tehtävillä on myös luokka, jonka mukaan tehtäviä voi jaotella. Alussa käyttäjiä on vain yksi ja jos aika riittää, käyttäjiä lisätään. 
+Teen tietokantasovelluksen valmiista aiheesta ["muistilista"](http://advancedkittenry.github.io/suunnittelu_ja_tyoymparisto/aiheet/Muistilista.html). Tarkoituksena on siis toteuttaa sovellus, joka toimii muistilistan tavoin: käyttäjä voi lisätä tehtäviä, antaa niille tärkeysasteen ja merkitä ne tehdyiksi. Tehtävillä on myös kategoria, jonka mukaan tehtäviä voi jaotella. Käyttäjiä voi olla useita ja jokaisella käyttäjällä on henkilökohtaiset tehtävät, mutta kategoriat ovat kaikille yhteisiä. 
 
 ## Sovellus
 Sovellus toimii [Herokussa](https://mamelukin-muistilista.herokuapp.com/) ja sitä voi testata seuraavalla tunnuksella:
