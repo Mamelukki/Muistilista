@@ -9,7 +9,9 @@ from application.categories.forms import CategoryForm, EditForm
 @app.route("/categories", methods=["GET"])
 @login_required
 def categories_index():
-    return render_template("categories/list.html", categories = Category.query.all(), id = current_user.id)
+    categories = Category.query.all()
+    categories.sort(key=lambda Category: Category.name, reverse = False)
+    return render_template("categories/list.html", categories = categories, id = current_user.id)
 
 @app.route("/categories/new/")
 @login_required
