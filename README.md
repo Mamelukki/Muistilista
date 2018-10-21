@@ -15,3 +15,5 @@ Sovellus toimii [Herokussa](https://mamelukin-muistilista.herokuapp.com/) ja sit
 [Keskeiset käyttötapaukset](https://github.com/Mamelukki/Muistilista/blob/master/documentation/k%C3%A4yttotapaukset.md)
 
 [Käyttö- ja asennusohje](https://github.com/Mamelukki/Muistilista/blob/master/documentation/ohjeet.md)
+
+[CREATE TABLE -lauseet](https://github.com/Mamelukki/Muistilista/blob/master/documentation/createtable.md)
