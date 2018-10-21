@@ -1,7 +1,7 @@
 # CREATE TABLE -lauseet
 
 ### Käyttäjä
-'''
+``` 
 CREATE TABLE account (
 	id INTEGER NOT NULL, 
 	date_created DATETIME, 
@@ -10,10 +10,10 @@ CREATE TABLE account (
 	username VARCHAR(144) NOT NULL, 
 	password VARCHAR(144) NOT NULL, 
 	PRIMARY KEY (id)
-'''
+``` 
 
 ### Kategoria
-'''
+``` 
 CREATE TABLE category (
 	id INTEGER NOT NULL, 
 	date_created DATETIME, 
@@ -22,9 +22,9 @@ CREATE TABLE category (
 	account_id INTEGER NOT NULL, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY(account_id) REFERENCES account (id)
-'''
+``` 
 
-'''
+``` 
 ### Tehtävä 
 CREATE TABLE task (
 	id INTEGER NOT NULL, 
@@ -37,9 +37,9 @@ CREATE TABLE task (
 	PRIMARY KEY (id), 
 	CHECK (done IN (0, 1)), 
 	FOREIGN KEY(account_id) REFERENCES account (id)
-'''
+``` 
 
-'''
+``` 
 ### Tehtävät ja kategoriat
 CREATE TABLE tasks_and_categories (
 	task_id INTEGER NOT NULL, 
@@ -47,4 +47,4 @@ CREATE TABLE tasks_and_categories (
 	PRIMARY KEY (task_id, category_id), 
 	FOREIGN KEY(task_id) REFERENCES task (id), 
 	FOREIGN KEY(category_id) REFERENCES category (id)
-'''
+``` 
