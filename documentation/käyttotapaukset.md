@@ -18,8 +18,14 @@ Käyttäjä voi tarkastella lisäämiään tehtäviä ja muuttaa niiden statukse
 ### Tehtävän poistaminen
 Käyttäjä voi halutessaan poistaa tehtäviä muistilistalta. 
 
-### Luokan lisääminen
+### Kategorian lisääminen
 Käyttäjä voi lisätä sovellukseen uusia kategorioita tehtävien organisoimiseksi. 
 
-### Luokan poistaminen
-Käyttäjä voi poistaa kategorioita. 
+### Kategorian muokkaaminen
+Käyttäjä voi muokata itse tekemiään kategorioita. 
+
+### Kategorioiden takastelu
+Käyttäjä voi tarkastella kaikkia kategorioita ja niihin kuuluvia tehtäviä. 
+
+### Kategorian poistaminen
+Käyttäjä voi poistaa itse tekemiään kategorioita. 
