@@ -26,7 +26,7 @@ backref=db.backref('Task', lazy=True))
         self.tasks_and_categories = tasks_and_categories
 
     def get_id(self):
-      return self.id
+        return self.id
 
     @staticmethod
     def categories_of_a_task(help_id):
