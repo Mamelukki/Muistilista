@@ -30,12 +30,12 @@ backref=db.backref('Task', lazy=True))
 
     @staticmethod
     def categories_of_a_task(help_id):
-
         string = ()
         stmt = text('SELECT category.name FROM task, category, tasks_and_categories'
         ' WHERE tasks_and_categories.task_id = ' + str(help_id) +
         ' AND tasks_and_categories.category_id = category.id'
-        ' AND tasks_and_categories.task_id = task.id')
+        ' AND tasks_and_categories.task_id = task.id'
+        ' ORDER BY category.name ASC')
 
         res = db.engine.execute(stmt)
         categories = []
