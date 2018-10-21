@@ -16,6 +16,7 @@
 	  <input type="submit" class="btn btn-info btn-sm" value="Tiedot"/>
 	</form>
       </td>
+      {% if category.account_id == id %}
       <td>
         <form method="POST" action="{{ url_for('categories_edit', category_id=category.id) }}">
 	  <input type="submit" class="btn btn-info btn-sm" value="Muokkaa"/>
@@ -25,6 +26,14 @@
         <form method="POST" action="{{ url_for('categories_remove', category_id=category.id) }}">
 	  <input type="submit" class="btn btn-info btn-sm" value="Poista"/>
 	</form>
+      {% else %}
+      <td>
+        <input type="submit" class="btn btn-info btn-sm disabled" value="Muokkaa"/>
+      </td>
+      <td>
+	<input type="submit" class="btn btn-info btn-sm disabled" value="Poista"/>
+      <td>
+      {% endif %}
       </td>
     </tr>
     {% endfor %}
