@@ -24,8 +24,8 @@ CREATE TABLE category (
 	FOREIGN KEY(account_id) REFERENCES account (id)
 ``` 
 
-``` 
 ### Tehtävä 
+``` 
 CREATE TABLE task (
 	id INTEGER NOT NULL, 
 	date_created DATETIME, 
@@ -39,8 +39,8 @@ CREATE TABLE task (
 	FOREIGN KEY(account_id) REFERENCES account (id)
 ``` 
 
-``` 
 ### Tehtävät ja kategoriat
+``` 
 CREATE TABLE tasks_and_categories (
 	task_id INTEGER NOT NULL, 
 	category_id INTEGER NOT NULL, 
